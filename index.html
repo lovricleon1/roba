@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBERTO | Luxury Services Dubrovnik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <div id="preloader" class="fixed inset-0 z-[200] bg-black flex flex-col items-center justify-center transition-opacity duration-1000">
+        <div class="w-20 h-20 border-2 border-gold/20 border-t-gold rounded-full animate-spin mb-8"></div>
+        <span class="text-4xl font-bold serif tracking-[0.3em] text-white gold-text-shimmer">ROBERTO</span>
+    </div>
+
+    <nav id="main-nav" class="fixed w-full z-[100] transition-all duration-700 py-6 px-6 md:px-20 flex justify-between items-center bg-black border-b border-white/10 shadow-lg">
+    <div class="logo-container text-center">
+        <span class="text-3xl md:text-4xl font-extrabold serif tracking-[0.2em] text-white">ROBERTO</span>
+        <span class="text-[10px] uppercase tracking-[0.5em] text-gold block mt-1">Luxury Services Dubrovnik</span>
+    </div>
+    
+    <div class="hidden lg:flex items-center space-x-10 uppercase text-xs tracking-[0.2em]">
+        <a href="#home" class="nav-link text-white" data-en="Home" data-hr="Početna">Home</a>
+        <a href="#about" class="nav-link text-white" data-en="Our Story" data-hr="Naša Priča">Our Story</a>
+        <a href="#fleet" class="nav-link text-white" data-en="The Fleet" data-hr="Flota">The Fleet</a>
+        
+        <div class="flex items-center space-x-4 bg-white/5 px-5 py-3 rounded-full border border-white/10 ml-6">
+            <button onclick="changeLang('en')" class="lang-btn text-white active">EN</button>
+            <span class="text-gray-600">|</span>
+            <button onclick="changeLang('hr')" class="lang-btn text-white">HR</button>
+        </div>
+        <a href="https://wa.me/385916222078" class="gold-btn">
+            <span data-en="Reserve Now" data-hr="Rezerviraj Odmah">Reserve Now</span>
+        </a>
+    </div>
+</nav>
+
+    <section id="home" class="relative h-screen overflow-hidden flex items-center justify-center bg-black">
+    <div class="absolute inset-0 z-0">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+    <source src="https://www.dropbox.com/scl/fi/lhz0pxwce7lkk93p9lz5q/hero-video.mp4?rlkey=jkt5u49thst02bc6touwdflw3&st=xiuq1umo&raw=1" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+        <div class="absolute inset-0 bg-black/40 shadow-[inset_0_0_200px_rgba(0,0,0,0.6)]"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4" data-aos="zoom-out" data-aos-duration="2500">
+        <h1 class="text-7xl md:text-[130px] serif leading-none mb-10 text-white tracking-tighter drop-shadow-2xl">
+            <span class="block" data-en="Your Luxury" data-hr="Vaš Luksuz">Your Luxury</span>
+            <span class="italic text-gold" data-en="Comes First." data-hr="Dolazi Prvi.">Comes First.</span>
+        </h1>
+        <div class="h-16 w-[1px] bg-gold mx-auto mb-10 animate-bounce"></div>
+        <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-8 justify-center">
+            <a href="#booking" class="gold-btn text-lg py-5 px-14" data-en="Get a Quote" data-hr="Zatraži Ponudu">Get a Quote</a>
+            <a href="https://wa.me/385916222078" class="border-2 border-white/50 text-white px-14 py-5 rounded-full hover:bg-white/10 hover:border-white transition uppercase tracking-widest text-sm font-semibold backdrop-blur-md">WhatsApp VIP</a>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="py-48 px-6 md:px-20 bg-gray-950 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+        <div data-aos="fade-right">
+            <h3 class="text-gold tracking-[0.4em] uppercase text-sm font-bold mb-5 serif">About Roberto Luxury</h3>
+            <h2 class="text-6xl md:text-7xl serif mb-12 leading-tight text-white" data-en="Elite Standards, Discrete Service" data-hr="Elitni Standardi, Diskretna Usluga">Elite Standards,<br> Discrete Service</h2>
+            <div class="space-y-10 text-gray-200 font-light text-2xl md:text-3xl leading-relaxed opacity-90">
+                <p data-en="We provide uncompromising quality for private transfers, business travel, and bespoke excursions. Our licensed chauffeurs and modern V-Class fleet define professionalism." data-hr="Pružamo beskompromisnu kvalitetu za privatne transfere, poslovna putovanja i personalizirane izlete. Naši licencirani vozači i moderna flota V-klase definiraju profesionalizam.">We provide uncompromising quality for private transfers, business travel, and bespoke excursions. Our licensed chauffeurs and modern V-Class fleet define professionalism.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-10 mt-16 border-t border-white/10 pt-16">
+                <div class="border-l-4 border-gold pl-6">
+                    <span class="text-5xl font-extrabold text-gold serif shimmer-gold">24/7</span>
+                    <p class="text-sm uppercase text-gray-400 mt-2 font-semibold" data-en="Support & Availability" data-hr="Podrška i Dostupnost">Support & Availability</p>
+                </div>
+                <div class="border-l-4 border-gold pl-6">
+                    <span class="text-5xl font-extrabold text-gold serif shimmer-gold">VIP</span>
+                    <p class="text-sm uppercase text-gray-400 mt-2 font-semibold" data-en="Executive Treatment" data-hr="Tretman za Izvršne Klijente">Executive Treatment</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1500" class="w-full h-[600px] object-cover" alt="Luxury Interior">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+    </div>
+</section>
+
+    <section class="relative py-60 dubrovnik-parallax flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
+            <h2 class="text-5xl md:text-8xl serif mb-8" data-en="The Adriatic Pearl" data-hr="Biser Jadrana">The Adriatic Pearl</h2>
+            <p class="text-2xl md:text-3xl italic font-light max-w-4xl mx-auto" data-en="Experience the stunning views of Dubrovnik with the comfort you deserve." data-hr="Doživite zadivljujuće poglede na Dubrovnik uz udobnost koju zaslužujete.">Experience the stunning views of Dubrovnik with the comfort you deserve.</p>
+        </div>
+    </section>
+
+    <section id="fleet" class="py-48 px-6 bg-black border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6 text-center mb-24" data-aos="fade-up">
+        <h3 class="text-gold tracking-[0.4em] uppercase text-sm font-bold mb-5 serif">Our Vehicles</h3>
+        <h2 class="text-6xl md:text-7xl serif text-white mb-10" data-en="The Mercedes-Benz V-Class" data-hr="Mercedes-Benz V-Klasa">The Mercedes-Benz V-Class</h2>
+        <p class="text-2xl md:text-3xl font-light text-gray-300 max-w-4xl mx-auto leading-relaxed" data-en="Experience unmatched comfort with our flagship fleet. Perfect for up to 7 passengers with luggage, offering leather seating, privacy, and full climate control." data-hr="Doživite neusporedivu udobnost s našom vodećom flotom. Savršeno za do 7 putnika s prtljagom, nudi kožna sjedala, privatnost i potpunu kontrolu klime.">Experience unmatched comfort with our flagship fleet. Perfect for up to 7 passengers with luggage, offering leather seating, privacy, and full climate control.</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group border border-white/10">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1500" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-1000" alt="V-Class Exterior">
+            <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black via-black/40 to-transparent">
+                <h4 class="text-3xl serif text-white" data-en="Elegant Appearance" data-hr="Elegantan Izgled">Elegant Appearance</h4>
+                <div class="w-12 h-[2px] bg-gold mt-4"></div>
+            </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group border border-white/10">
+            <img src="https://images.unsplash.com/photo-1629891041926-c2a4f4d2bd54?q=80&w=1500" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-1000" alt="V-Class Interior">
+            <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black via-black/40 to-transparent">
+                <h4 class="text-3xl serif text-white" data-en="VIP Comfort Zone" data-hr="VIP Zona Udobnosti">VIP Comfort Zone</h4>
+                <div class="w-12 h-[2px] bg-gold mt-4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="py-24 px-6 bg-gray-950 text-white text-center">
+        <span class="text-5xl md:text-6xl font-bold serif tracking-[0.3em] block mb-10">ROBERTO</span>
+        <div class="flex justify-center space-x-12 mb-16 text-4xl text-gray-500">
+            <a href="https://www.instagram.com/roberto_luxury_services/" class="hover:text-gold transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/385916222078" class="hover:text-gold transition"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="text-gray-600 tracking-widest uppercase text-xs">© 2026 Roberto Luxury Services Dubrovnik</p>
+    </footer>
+
+    <a href="https://wa.me/385916222078" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-20 h-20 rounded-full flex items-center justify-center text-5xl shadow-2xl z-[150] hover:scale-110 transition p-5">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
