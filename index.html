@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -16,11 +17,43 @@
         <span class="text-4xl font-bold serif tracking-[0.3em] text-white gold-text-shimmer">ROBERTO</span>
     </div>
 
-    <nav id="main-nav" class="fixed w-full z-[100] transition-all duration-700 py-6 px-6 md:px-20 flex justify-between items-center bg-black border-b border-white/10 shadow-lg">
+   <nav id="main-nav" class="fixed w-full z-[100] transition-all duration-700 py-6 px-6 md:px-20 flex justify-between items-center bg-black border-b border-white/10 shadow-lg">
     <div class="logo-container text-center">
-        <span class="text-3xl md:text-4xl font-extrabold serif tracking-[0.2em] text-white">ROBERTO</span>
+        <span class="text-3xl md:text-4xl font-extrabold serif tracking-[0.2em] text-white uppercase">ROBERTO</span>
         <span class="text-[10px] uppercase tracking-[0.5em] text-gold block mt-1">Luxury Services Dubrovnik</span>
     </div>
+    
+    <div class="hidden lg:flex items-center space-x-10 uppercase text-xs tracking-[0.2em]">
+        <a href="#home" class="nav-link text-white">Home</a>
+        <a href="#about" class="nav-link text-white">Our Story</a>
+        <a href="#fleet" class="nav-link text-white">The Fleet</a>
+        <div class="flex items-center space-x-4 bg-white/5 px-5 py-3 rounded-full border border-white/10 ml-6">
+            <button onclick="changeLang('en')" class="lang-btn text-white active">EN</button>
+            <span class="text-gray-600">|</span>
+            <button onclick="changeLang('hr')" class="lang-btn text-white">HR</button>
+        </div>
+        <a href="https://wa.me/385916222078" class="gold-btn">Reserve Now</a>
+    </div>
+
+    <button id="menu-toggle" class="lg:hidden text-white text-3xl focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-[110] flex flex-col items-center justify-center space-y-10 transition-all duration-500 translate-x-full lg:hidden">
+        <button id="menu-close" class="absolute top-10 right-10 text-white text-4xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#home" class="mobile-nav-link text-3xl serif text-white">Home</a>
+        <a href="#about" class="mobile-nav-link text-3xl serif text-white">Our Story</a>
+        <a href="#fleet" class="mobile-nav-link text-3xl serif text-white">The Fleet</a>
+        <a href="https://wa.me/385916222078" class="gold-btn text-xl px-12">Reserve Now</a>
+        <div class="flex space-x-8 text-xl">
+            <button onclick="changeLang('en')" class="text-gold font-bold">EN</button>
+            <span class="text-white/20">|</span>
+            <button onclick="changeLang('hr')" class="text-white font-bold">HR</button>
+        </div>
+    </div>
+</nav>
     
     <div class="hidden lg:flex items-center space-x-10 uppercase text-xs tracking-[0.2em]">
         <a href="#home" class="nav-link text-white" data-en="Home" data-hr="Početna">Home</a>
