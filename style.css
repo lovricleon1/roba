@@ -185,3 +185,22 @@ body {
         text-align: center;
     }
 }
+
+/* Mobile Menu Animation */
+#mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-nav-link {
+    transition: 0.3s;
+    letter-spacing: 0.1em;
+}
+
+.mobile-nav-link:hover {
+    color: var(--gold);
+}
+
+/* Osiguraj da se body ne skrola kad je meni otvoren */
+.no-scroll {
+    overflow: hidden;
+}
