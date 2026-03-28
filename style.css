@@ -164,15 +164,6 @@ body {
         padding: 120px 20px !important;
     }
 
-    /* 7. WhatsApp gumb - malo ga smanjujemo da ne smeta prstima */
-    footer a[href*="wa.me"] {
-        width: 65px !important;
-        height: 65px !important;
-        bottom: 20px !important;
-        right: 20px !important;
-        font-size: 35px !important;
-    }
-
     /* 8. Hero gumbi - jedan ispod drugog na malim ekranima */
     #home .flex {
         flex-direction: column !important;
