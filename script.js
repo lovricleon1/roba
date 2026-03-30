@@ -1,7 +1,5 @@
-// Inicijalizacija animacija
 AOS.init();
 
-// PRELOADER LOGIKA
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     setTimeout(() => {
@@ -12,18 +10,21 @@ window.addEventListener('load', () => {
     }, 1500); 
 });
 
-// PROMJENA JEZIKA
 function changeLang(lang) {
     document.querySelectorAll('[data-en]').forEach(el => {
         el.textContent = el.getAttribute(`data-${lang}`);
     });
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if(btn.textContent.toLowerCase() === lang) btn.classList.add('active');
+        const btnLang = btn.textContent.trim().toLowerCase();
+        if (btnLang === lang.toLowerCase()) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
     });
 }
 
-// NAV SCROLL EFEKT
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('main-nav');
     if (window.scrollY > 50) {
@@ -35,33 +36,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('heroVideo');
-    if (video) {
-        video.play().catch(function(error) {
-            console.log("Video autoplay was prevented. User interaction might be needed.");
-        });
-    }
-});
-
 const menuToggle = document.getElementById('menu-toggle');
 const menuClose = document.getElementById('menu-close');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-// Otvori meni
 menuToggle.addEventListener('click', () => {
     mobileMenu.classList.add('active');
     document.body.classList.add('no-scroll');
 });
 
-// Zatvori meni na X
 menuClose.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     document.body.classList.remove('no-scroll');
 });
 
-// Zatvori meni kad klikneš na neki link (npr. Fleet)
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
