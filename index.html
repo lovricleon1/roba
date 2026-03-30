@@ -11,27 +11,33 @@
 </head>
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
-    <div id="preloader" class="fixed inset-0 z-[200] bg-black flex flex-col items-center justify-center transition-opacity duration-1000">
-        <div class="w-20 h-20 border-2 border-gold/20 border-t-gold rounded-full animate-spin mb-8"></div>
-        <span class="text-4xl font-bold serif tracking-[0.3em] text-white gold-text-shimmer">ROBERTO</span>
+   <div id="preloader" class="fixed inset-0 z-[200] bg-black flex flex-col items-center justify-center transition-opacity duration-1000">
+    <div class="w-20 h-20 border-2 border-gold/20 border-t-gold rounded-full animate-spin mb-8"></div>
+    <div class="text-center">
+        <span class="text-4xl md:text-5xl font-bold serif tracking-[0.3em] text-white gold-text-shimmer block">ROBERTO</span>
+        <span class="text-[10px] uppercase tracking-[0.5em] text-gold block mt-2 opacity-80">Luxury Services</span>
     </div>
+</div>
 
-   <nav id="main-nav" class="fixed w-full z-[100] transition-all duration-700 py-6 px-6 md:px-20 flex justify-between items-center bg-black border-b border-white/10 shadow-lg">
+<nav id="main-nav" class="fixed w-full z-[100] transition-all duration-700 py-6 px-6 md:px-20 flex justify-between items-center bg-black border-b border-white/10 shadow-lg">
     <div class="logo-container text-center">
         <span class="text-3xl md:text-4xl font-extrabold serif tracking-[0.2em] text-white uppercase">ROBERTO</span>
         <span class="text-[10px] uppercase tracking-[0.5em] text-gold block mt-1">Luxury Services Dubrovnik</span>
     </div>
     
     <div class="hidden lg:flex items-center space-x-10 uppercase text-xs tracking-[0.2em]">
-        <a href="#home" class="nav-link text-white">Home</a>
-        <a href="#about" class="nav-link text-white">Our Story</a>
-        <a href="#fleet" class="nav-link text-white">The Fleet</a>
+        <a href="#home" class="nav-link text-white" data-en="Home" data-hr="Početna">Home</a>
+        <a href="#about" class="nav-link text-white" data-en="About Us" data-hr="O nama">About Us</a>
+        <a href="#fleet" class="nav-link text-white" data-en="Our Vehicles" data-hr="Naša Flota">Our Vehicles</a>
+        <a href="#reviews" class="nav-link text-white" data-en="Reviews" data-hr="Recenzije">Reviews</a>
         <div class="flex items-center space-x-4 bg-white/5 px-5 py-3 rounded-full border border-white/10 ml-6">
             <button onclick="changeLang('en')" class="lang-btn text-white active">EN</button>
             <span class="text-gray-600">|</span>
             <button onclick="changeLang('hr')" class="lang-btn text-white">HR</button>
         </div>
-        <a href="https://wa.me/385916222078" class="gold-btn">Reserve Now</a>
+        <a href="https://wa.me/385916222978" class="gold-btn">
+            <span data-en="Reserve Now" data-hr="Rezerviraj Odmah">Reserve Now</span>
+        </a>
     </div>
 
     <button id="menu-toggle" class="lg:hidden text-white text-3xl focus:outline-none">
@@ -42,40 +48,27 @@
         <button id="menu-close" class="absolute top-10 right-10 text-white text-4xl">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <a href="#home" class="mobile-nav-link text-3xl serif text-white">Home</a>
-        <a href="#about" class="mobile-nav-link text-3xl serif text-white">Our Story</a>
-        <a href="#fleet" class="mobile-nav-link text-3xl serif text-white">The Fleet</a>
-        <a href="https://wa.me/385916222078" class="gold-btn text-xl px-12">Reserve Now</a>
-        <div class="flex space-x-8 text-xl">
-            <button onclick="changeLang('en')" class="text-gold font-bold">EN</button>
-            <span class="text-white/20">|</span>
-            <button onclick="changeLang('hr')" class="text-white font-bold">HR</button>
-        </div>
-    </div>
-</nav>
-    
-    <div class="hidden lg:flex items-center space-x-10 uppercase text-xs tracking-[0.2em]">
-        <a href="#home" class="nav-link text-white" data-en="Home" data-hr="Početna">Home</a>
-        <a href="#about" class="nav-link text-white" data-en="Our Story" data-hr="Naša Priča">Our Story</a>
-        <a href="#fleet" class="nav-link text-white" data-en="The Fleet" data-hr="Flota">The Fleet</a>
-        
-        <div class="flex items-center space-x-4 bg-white/5 px-5 py-3 rounded-full border border-white/10 ml-6">
-            <button onclick="changeLang('en')" class="lang-btn text-white active">EN</button>
-            <span class="text-gray-600">|</span>
-            <button onclick="changeLang('hr')" class="lang-btn text-white">HR</button>
-        </div>
-        <a href="https://wa.me/385916222078" class="gold-btn">
+        <a href="#home" class="mobile-nav-link text-3xl serif text-white" data-en="Home" data-hr="Početna">Home</a>
+        <a href="#about" class="mobile-nav-link text-3xl serif text-white" data-en="About Us" data-hr="O nama">About Us</a>
+        <a href="#fleet" class="mobile-nav-link text-3xl serif text-white" data-en="Our Vehicles" data-hr="Naša Flota">Our Vehicles</a>
+        <a href="#reviews" class="mobile-nav-link text-3xl serif text-white" data-en="Reviews" data-hr="Recenzije">Reviews</a>
+        <a href="https://wa.me/385916222978" class="gold-btn text-xl px-12">
             <span data-en="Reserve Now" data-hr="Rezerviraj Odmah">Reserve Now</span>
         </a>
+        <div class="flex space-x-8 text-xl">
+            <button onclick="changeLang('en')" class="lang-btn text-white active">EN</button>
+            <span class="text-white/20">|</span>
+            <button onclick="changeLang('hr')" class="lang-btn text-white">HR</button>
+        </div>
     </div>
 </nav>
 
-    <section id="home" class="relative h-screen overflow-hidden flex items-center justify-center bg-black">
+<section id="home" class="relative h-screen overflow-hidden flex items-center justify-center bg-black">
     <div class="absolute inset-0 z-0">
         <video autoplay muted loop playsinline class="w-full h-full object-cover">
-    <source src="https://www.dropbox.com/scl/fi/lhz0pxwce7lkk93p9lz5q/hero-video.mp4?rlkey=jkt5u49thst02bc6touwdflw3&st=xiuq1umo&raw=1" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+            <source src="https://www.dropbox.com/scl/fi/lhz0pxwce7lkk93p9lz5q/hero-video.mp4?rlkey=jkt5u49thst02bc6touwdflw3&st=xiuq1umo&raw=1" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="absolute inset-0 bg-black/40 shadow-[inset_0_0_200px_rgba(0,0,0,0.6)]"></div>
     </div>
 
@@ -86,16 +79,16 @@
         </h1>
         <div class="h-16 w-[1px] bg-gold mx-auto mb-10 animate-bounce"></div>
         <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-8 justify-center">
-            <a href="#booking" class="gold-btn text-lg py-5 px-14" data-en="Get a Quote" data-hr="Zatraži Ponudu">Get a Quote</a>
-            <a href="https://wa.me/385916222078" class="border-2 border-white/50 text-white px-14 py-5 rounded-full hover:bg-white/10 hover:border-white transition uppercase tracking-widest text-sm font-semibold backdrop-blur-md">WhatsApp VIP</a>
+            <a href="#footer-contact" class="gold-btn text-lg py-5 px-14" data-en="Get a Quote" data-hr="Zatraži Ponudu">Get a Quote</a>
+            <a href="https://wa.me/385916222978" class="border-2 border-white/50 text-white px-14 py-5 rounded-full hover:bg-white/10 hover:border-white transition uppercase tracking-widest text-sm font-semibold backdrop-blur-md">Direct Message</a>
         </div>
     </div>
 </section>
 
-    <section id="about" class="py-48 px-6 md:px-20 bg-gray-950 relative overflow-hidden">
+<section id="about" class="py-48 px-6 md:px-20 bg-gray-950 relative overflow-hidden">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
         <div data-aos="fade-right">
-            <h3 class="text-gold tracking-[0.4em] uppercase text-sm font-bold mb-5 serif">About Roberto Luxury</h3>
+            <h3 class="text-gold tracking-[0.4em] uppercase text-sm font-bold mb-5 serif">About Roberto Luxury Services</h3>
             <h2 class="text-6xl md:text-7xl serif mb-12 leading-tight text-white" data-en="Elite Standards, Discrete Service" data-hr="Elitni Standardi, Diskretna Usluga">Elite Standards,<br> Discrete Service</h2>
             <div class="space-y-10 text-gray-200 font-light text-2xl md:text-3xl leading-relaxed opacity-90">
                 <p data-en="We provide uncompromising quality for private transfers, business travel, and bespoke excursions. Our licensed chauffeurs and modern V-Class fleet define professionalism." data-hr="Pružamo beskompromisnu kvalitetu za privatne transfere, poslovna putovanja i personalizirane izlete. Naši licencirani vozači i moderna flota V-klase definiraju profesionalizam.">We provide uncompromising quality for private transfers, business travel, and bespoke excursions. Our licensed chauffeurs and modern V-Class fleet define professionalism.</p>
@@ -118,15 +111,15 @@
     </div>
 </section>
 
-    <section class="relative py-60 dubrovnik-parallax flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/30"></div>
-        <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
-            <h2 class="text-5xl md:text-8xl serif mb-8" data-en="The Adriatic Pearl" data-hr="Biser Jadrana">The Adriatic Pearl</h2>
-            <p class="text-2xl md:text-3xl italic font-light max-w-4xl mx-auto" data-en="Experience the stunning views of Dubrovnik with the comfort you deserve." data-hr="Doživite zadivljujuće poglede na Dubrovnik uz udobnost koju zaslužujete.">Experience the stunning views of Dubrovnik with the comfort you deserve.</p>
-        </div>
-    </section>
+<section class="relative py-60 dubrovnik-parallax flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
+        <h2 class="text-5xl md:text-8xl serif mb-8" data-en="The Adriatic Pearl" data-hr="Biser Jadrana">The Adriatic Pearl</h2>
+        <p class="text-2xl md:text-3xl italic font-light max-w-4xl mx-auto" data-en="Experience the stunning views of Dubrovnik with the comfort you deserve." data-hr="Doživite zadivljujuće poglede na Dubrovnik uz udobnost koju zaslužujete.">Experience the stunning views of Dubrovnik with the comfort you deserve.</p>
+    </div>
+</section>
 
-    <section id="fleet" class="py-48 px-6 bg-black border-y border-white/5">
+<section id="fleet" class="py-48 px-6 bg-black border-y border-white/5">
     <div class="max-w-7xl mx-auto px-6 text-center mb-24" data-aos="fade-up">
         <h3 class="text-gold tracking-[0.4em] uppercase text-sm font-bold mb-5 serif">Our Vehicles</h3>
         <h2 class="text-6xl md:text-7xl serif text-white mb-10" data-en="The Mercedes-Benz V-Class" data-hr="Mercedes-Benz V-Klasa">The Mercedes-Benz V-Class</h2>
@@ -134,36 +127,85 @@
     </div>
 
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group border border-white/10">
-            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1500" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-1000" alt="V-Class Exterior">
-            <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black via-black/40 to-transparent">
-                <h4 class="text-3xl serif text-white" data-en="Elegant Appearance" data-hr="Elegantan Izgled">Elegant Appearance</h4>
-                <div class="w-12 h-[2px] bg-gold mt-4"></div>
-            </div>
+    
+    <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group border border-white/10">
+        <img src="vclass-night.jpg.jpg" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-1000" alt="V-Class Exterior Night">
+        <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black via-black/40 to-transparent">
+            <h4 class="text-3xl serif text-white" data-en="Elegant Appearance" data-hr="Elegantan Izgled">Elegant Appearance</h4>
+            <div class="w-12 h-[2px] bg-gold mt-4"></div>
         </div>
-        <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group border border-white/10">
-            <img src="https://images.unsplash.com/photo-1629891041926-c2a4f4d2bd54?q=80&w=1500" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-1000" alt="V-Class Interior">
-            <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black via-black/40 to-transparent">
-                <h4 class="text-3xl serif text-white" data-en="VIP Comfort Zone" data-hr="VIP Zona Udobnosti">VIP Comfort Zone</h4>
-                <div class="w-12 h-[2px] bg-gold mt-4"></div>
+    </div>
+
+    <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group border border-white/10">
+        <img src="vclass-vip.jpg.jpg" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-1000" alt="V-Class VIP Interior">
+        <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black via-black/40 to-transparent">
+            <h4 class="text-3xl serif text-white" data-en="VIP Comfort Zone" data-hr="VIP Zona Udobnosti">VIP Comfort Zone</h4>
+            <div class="w-12 h-[2px] bg-gold mt-4"></div>
+        </div>
+    </div>
+
+</div>
+</section>
+<section id="reviews" class="py-48 px-6 bg-black relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-24" data-aos="fade-up">
+            <h3 class="text-gold tracking-[0.4em] uppercase text-sm font-bold mb-5 serif">Testimonials</h3>
+            <h2 class="text-6xl md:text-7xl serif text-white" data-en="What Our Clients Say" data-hr="Što Kažu Naši Klijenti">What Our Clients Say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-900/50 p-10 rounded-2xl border border-white/5 order-1 md:order-none" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex text-gold mb-6 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-8 leading-relaxed" data-en="Best transfer service in Dubrovnik! Roberto was professional, the V-Class was spotless, and the ride was incredibly smooth. Highly recommend!" data-hr="Najbolja usluga transfera u Dubrovniku! Roberto je bio profesionalan, V-klasa je bila besprijekorno čista, a vožnja nevjerojatno ugodna. Topla preporuka!">"Best transfer service in Dubrovnik! Roberto was professional, the V-Class was spotless, and the ride was incredibly smooth. Highly recommend!"</p>
+                <div class="font-bold text-white tracking-widest uppercase text-xs">— Sarah Jenkins</div>
+            </div>
+
+            <div class="bg-gray-900/50 p-10 rounded-2xl border border-gold/20 transform md:-translate-y-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex text-gold mb-6 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-8 leading-relaxed text-lg" data-en="Top notch experience. We used Roberto for a private excursion to Montenegro. Knowledgeable driver and ultimate comfort. Truly luxury services." data-hr="Vrhunsko iskustvo. Koristili smo Roberta za privatni izlet u Crnu Goru. Vozač s velikim znanjem i vrhunska udobnost. Uistinu luksuzna usluga.">"Top notch experience. We used Roberto for a private excursion to Montenegro. Knowledgeable driver and ultimate comfort. Truly luxury services."</p>
+                <div class="font-bold text-gold tracking-widest uppercase text-xs">— Michael Rossi</div>
+            </div>
+
+            <div class="bg-gray-900/50 p-10 rounded-2xl border border-white/5" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex text-gold mb-6 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-8 leading-relaxed" data-en="Prompt, reliable, and very polite. The best way to travel around the Adriatic coast. Will definitely book again next year." data-hr="Točan, pouzdan i vrlo pristojan. Najbolji način za putovanje jadranskom obalom. Definitivno ćemo ponovno rezervirati sljedeće godine.">"Prompt, reliable, and very polite. The best way to travel around the Adriatic coast. Will definitely book again next year."</p>
+                <div class="font-bold text-white tracking-widest uppercase text-xs">— Elena Petrova</div>
             </div>
         </div>
     </div>
 </section>
 
-   <footer class="py-24 px-6 bg-gray-950 text-white text-center">
-    <span class="text-5xl md:text-6xl font-bold serif tracking-[0.3em] block mb-10">ROBERTO</span>
+<footer id="footer-contact" class="py-24 px-6 bg-gray-950 text-white text-center">
+    <div class="mb-10" data-aos="fade-up">
+        <span class="text-4xl md:text-6xl font-bold serif tracking-[0.3em] block uppercase">ROBERTO</span>
+        <span class="text-[10px] md:text-xs uppercase tracking-[0.5em] text-gold block mt-2 opacity-80">Luxury Services</span>
+    </div>
     
+    <div class="mb-12">
+        <a href="mailto:robertoluxuryservices@hotmail.com" class="text-gray-400 hover:text-gold transition-all duration-300 tracking-widest text-sm md:text-base border-b border-white/10 pb-2">
+            robertoluxuryservices@hotmail.com
+        </a>
+    </div>
+
     <div class="flex justify-center space-x-12 mb-16 text-4xl text-gray-500">
-        <a href="https://www.instagram.com/roberto_luxury_services/" class="hover:text-gold transition">
+        <a href="https://www.instagram.com/roberto_luxury_services/" target="_blank" class="hover:text-gold transition">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://wa.me/385916222978" class="hover:text-gold transition">
+        <a href="https://www.facebook.com/Robertoluxuryservices" target="_blank" class="hover:text-gold transition">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/385916222978" target="_blank" class="hover:text-gold transition">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
     
-    <p class="text-gray-600 tracking-widest uppercase text-xs">© 2026 Roberto Luxury Services Dubrovnik</p>
+    <p class="text-gray-600 tracking-widest uppercase text-[10px]">© 2026 Roberto Luxury Services Dubrovnik</p>
 </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
